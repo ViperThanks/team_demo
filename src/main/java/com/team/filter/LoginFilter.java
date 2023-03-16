@@ -44,6 +44,8 @@ public class LoginFilter implements Filter {
             filterChain.doFilter(request, response);
             return;
         }
+
+        log.info("拦截业务");
     }
 
     private boolean checkIsIgnore(String thisURI) {
